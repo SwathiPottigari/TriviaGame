@@ -16,44 +16,51 @@ var askedQuestions = [];
 var intervalId;
 
 //  This function is called when a Start button is clicked
+// Functionality : It displays the question to the user
 $("#start").click(function () {
     displayQstn();
     $("#start").attr("class", "Hide");
 });
 
-// if(timer===0){
-
-// };
-
 // This function is called when any of the answer option is clicked
+// Functionality: It displays if the user has answered correctly or not
 $(".ans").click(function () {
     if ($(this).text() === randomQstn.ca) {
-        revealAnswer("You won");
+        revealAnswer("You won", '');
         correct++;
     }
     else {
-        revealAnswer("You are wrong");
+        revealAnswer("You are wrong", randomQstn.ca);
         incorrect++;
     }
     resetTimer();
-   checkIfGameOver();
+    setTimeout(checkIfGameOver, 2000);
 
 });
 
-// This function is called whenever an option from the answers list is selected
-function revealAnswer(status) {
+//This function is called whenever an option from the answers list is selected
+// Functionality: This reveals the user if the user has selected a correct option or not
+function revealAnswer(status, answer) {
     question.text(status);
+    if (answer !== '') {
+        $("#answer").text("The correct answer was:" + answer);
+        $("#answer").removeClass("Hide");
+    }
+    else {
+        $("#answer").addClass("Hide");;
+    }
     $(".ans").addClass("Hide");
     $("#imageDiv").removeClass("Hide");
 }
 
-// This function is called when a user clicks on start button
+//This function is called when a user clicks on start button
+// Functionality: It displays the questions to the user
 function displayQstn() {
 
     randomQstn = generateRandom();
     $("#status").addClass("Hide");
     $("#imageDiv").addClass("Hide");
-
+    $("#answer").addClass("Hide");
 
     if (!askedQuestions.includes(randomQstn.q)) {
         intervalId = setInterval(decrement, 1000);
@@ -63,8 +70,6 @@ function displayQstn() {
         for (var i = 0; i < randomQstn.a.length; i++) {
             $("#answer" + (i + 1)).text(randomQstn.a[i]);
         }
-
-
     }
     else {
         displayQstn();
@@ -72,37 +77,40 @@ function displayQstn() {
 
 };
 
-// This function is called to select a random question from an array
+//This function is called to select a random question from an array
 function generateRandom() {
     var random = qstnsArray[Math.floor(Math.random() * qstnsArray.length)];
     return random;
 
 }
 
+// This function is used to decrease the timer
 function decrement() {
     timer--;
     $("#timeRemaining").text(timer);
     if (timer === 0) {
-        revealAnswer("Not answered");
+        revealAnswer("Not answered", randomQstn.ca);
         notAnswered++;
         resetTimer();
-        checkIfGameOver();
+        setTimeout(checkIfGameOver, 2000);
     }
 }
 
+// This function is used to reset the timer after each question
 function resetTimer() {
     timer = 5;
     $("#timeRemaining").text('');
     clearInterval(intervalId);
 }
 
-function checkIfGameOver(){
+// This function is used to check if the questions are completed
+function checkIfGameOver() {
     if (qstnsArray.length === askedQuestions.length) {
         question.text("Game Over");
         $("#imageDiv").addClass("Hide");
+        $("#answer").addClass("Hide");
     }
     else {
         displayQstn();
-       
     }
 }
