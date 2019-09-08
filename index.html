@@ -13,9 +13,9 @@
 
 <body>
     <header>
-        <div id="mainHeading">
+        <div id="mainHeader">
             <h1 id="mainHeading">Trivia Quiz</h1>
-            <h5>Ready to test your knowledge and learn some new words?</h5>
+            <h5 id="subTitle">Ready to test your knowledge and learn some new words?</h5>
         </div>
     </header>
     <button type="submit" id="start">Let's Start</button>
@@ -70,23 +70,25 @@
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12">
-                    <div  id="imageDiv">HIhg</div>
+                    <div id="imageDiv">HIhg</div>
                 </div>
             </div>
         </div>
     </div>
     <div class="scoreCard">
-        <div class="row">
-            <h5>Here is your score :</h5>
-        </div>
-        <div class="row">
-            <div id="wins"></div>
-        </div>
-        <div class="row">
-            <div id="lost"></div>
-        </div>
-        <div class="row">
-            <div id="incorrect"></div>
+        <div class="container">
+            <div class="row">
+                <h6>Here is your score :</h6>
+            </div>
+            <div class="row">
+                <div id="wins"></div>
+            </div>
+            <div class="row">
+                <div id="lost"></div>
+            </div>
+            <div class="row">
+                <div id="notanswered"></div>
+            </div>
         </div>
     </div>
     <audio id="lostAudio">
