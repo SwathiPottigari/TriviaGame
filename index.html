@@ -1,29 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trivia Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <header>
         <div id="mainHeading">
             <h1 id="mainHeading">Trivia Quiz</h1>
+            <h5>Ready to test your knowledge and learn some new words?</h5>
         </div>
     </header>
-    <button type="submit" id="start">Start</button>
-    <div id="timeRemaining"></div>
-    <div id="status"></div>
-    <div id="answer"></div>
-    <div id="question"></div>
-    <div id="answer1" class="ans"></div>
-    <div id="answer2" class="ans"></div>
-    <div id="answer3" class="ans"></div>
-    <div id="answer4" class="ans"></div>
-    <div class="Hide" id="imageDiv">HIhg</div>
+    <button type="submit" id="start">Let's Start</button>
+    <div class="questionWrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="timer"> Time Remaining :</div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div id="timeRemaining" class="timer"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="question"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="answer1" class="ans"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="answer2" class="ans"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="answer3" class="ans"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="answer4" class="ans"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="answerWrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div id="status"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div id="answer"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div  id="imageDiv">HIhg</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scoreCard">
+        <div class="row">
+            <h5>Here is your score :</h5>
+        </div>
+        <div class="row">
+            <div id="wins"></div>
+        </div>
+        <div class="row">
+            <div id="lost"></div>
+        </div>
+        <div class="row">
+            <div id="incorrect"></div>
+        </div>
+    </div>
+    <audio id="lostAudio">
+        <source src="assets/images/Lost.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="wonAudio">
+        <source src="assets/images/Win.mp3" type="audio/mpeg">
+    </audio>
+    <footer class="footer mt-auto py-3" style="text-align: center">Copyright@</footer>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>

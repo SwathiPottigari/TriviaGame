@@ -15,11 +15,16 @@ var notAnswered = 0;
 var askedQuestions = [];
 var intervalId;
 
+window.onload=function(){
+    $(".questionWrapper").addClass("hide");
+    $(".answerWrapper").addClass("hide");
+};
+
 //  This function is called when a Start button is clicked
 // Functionality : It displays the question to the user
 $("#start").click(function () {
     displayQstn();
-    $("#start").attr("class", "Hide");
+    $("#start").attr("class", "hide");
 });
 
 // This function is called when any of the answer option is clicked
@@ -41,30 +46,31 @@ $(".ans").click(function () {
 //This function is called whenever an option from the answers list is selected
 // Functionality: This reveals the user if the user has selected a correct option or not
 function revealAnswer(status, answer) {
-    question.text(status);
+    $("#status").text(status);
+    $(".answerWrapper").removeClass("hide");
     if (answer !== '') {
         $("#answer").text("The correct answer was:" + answer);
-        $("#answer").removeClass("Hide");
+        // $("#answer").removeClass("hide");
     }
     else {
-        $("#answer").addClass("Hide");;
+        $("#answer").addClass("hide");;
     }
-    $(".ans").addClass("Hide");
-    $("#imageDiv").removeClass("Hide");
+    $(".questionWrapper").addClass("hide");
+    // $("#imageDiv").removeClass("hide");
 }
 
 //This function is called when a user clicks on start button
 // Functionality: It displays the questions to the user
 function displayQstn() {
 
+    $(".questionWrapper").removeClass("hide");
     randomQstn = generateRandom();
-    $("#status").addClass("Hide");
-    $("#imageDiv").addClass("Hide");
-    $("#answer").addClass("Hide");
-
+    // $("#status").addClass("hide");
+    // $("#imageDiv").addClass("hide");
+    // $("#answer").addClass("hide");
+     $(".answerWrapper").addClass("hide");
     if (!askedQuestions.includes(randomQstn.q)) {
         intervalId = setInterval(decrement, 1000);
-        $(".ans").removeClass("Hide");
         askedQuestions.push(randomQstn.q);
         question.text(randomQstn.q);
         for (var i = 0; i < randomQstn.a.length; i++) {
@@ -99,16 +105,18 @@ function decrement() {
 // This function is used to reset the timer after each question
 function resetTimer() {
     timer = 5;
-    $("#timeRemaining").text('');
+    // $(".timer").addClass("Hide");
+    // $("#timeRemaining").text('');
     clearInterval(intervalId);
 }
 
 // This function is used to check if the questions are completed
 function checkIfGameOver() {
     if (qstnsArray.length === askedQuestions.length) {
-        question.text("Game Over");
-        $("#imageDiv").addClass("Hide");
-        $("#answer").addClass("Hide");
+        // $("#status").text("Game Over");
+        // $("#imageDiv").addClass("hide");
+        // $("#answer").addClass("hide");
+        $(".answerWrapper").addClass("hide");
     }
     else {
         displayQstn();
