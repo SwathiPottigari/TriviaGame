@@ -34,6 +34,54 @@ body{
     background-color: rgb(97, 16, 151);
 }
 
+.questionWrapper,.answerWrapper,.scoreCard{
+    color:rgb(97, 16, 151);
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5%;
+    font-size:large;
+    font: bolder;
+}
+
+#timer{
+    color: rgb(7, 65, 119);
+    font-size: xx-large;
+    font: bolder;
+    border: 2px dotted  rgb(7, 65, 119);
+    width: 50%;
+    margin: 0 auto;
+}
+
+.container{
+    margin-top: 5%;
+    border: 2px dashed rgb(97, 16, 151);
+    width: 60%;
+    font-size:large;
+}
+footer{
+    /* background-color: rgb(185, 145, 230); */
+    border-top: 4px solid rgb(97, 16, 151);    
+    text-align: center;
+    font-size: small;
+    height: 30px;
+    color:rgb(97, 16, 151);
+    /* padding-top: 20px; */
+    bottom: 0;
+    width: 100%;
+    margin-top: 20%;
+}
+
+@media  screen and (max-width:780px) {
+    #mainHeading
+    {
+        font-size: 5vh;
+    }
+}
+
+
+
+
 
 
 

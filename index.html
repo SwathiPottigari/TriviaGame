@@ -19,21 +19,16 @@
             <h5 id="subTitle">Are you ready to test your knowledge and learn some new words?</h5>
         </div>
     </header>
-    
+
     <div class="mainWrapper">
-            <div id="buttonDiv">
-                    <button type="submit" id="start">Yes,let's Start</button>
-                </div>
+        <div id="buttonDiv">
+            <button type="submit" id="start">Yes,let's Start</button>
+        </div>
         <div class="questionWrapper">
+            <div id="timer">
+                Time Remaining : <span id="timeRemaining"></span>
+            </div>
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <div class="timer"> Time Remaining :</div>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <div id="timeRemaining" class="timer"></div>
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div id="question"></div>
@@ -83,16 +78,24 @@
         <div class="scoreCard">
             <div class="container">
                 <div class="row">
-                    <h6>Here is your score :</h6>
+                    <div class="col-md-12 col-sm-12">
+                            <h4>Here is your score :</h4>
+                    </div>                    
                 </div>
                 <div class="row">
-                    <div id="wins"></div>
+                    <div class="col-md-12 col-sm-12">
+                            <div id="wins"></div>
+                    </div>                    
                 </div>
                 <div class="row">
-                    <div id="lost"></div>
+                        <div class="col-md-12 col-sm-12">
+                                <div id="lost"></div>
+                        </div>                    
                 </div>
                 <div class="row">
-                    <div id="notanswered"></div>
+                        <div class="col-md-12 col-sm-12">
+                                <div id="notanswered"></div>
+                        </div>                     
                 </div>
             </div>
         </div>

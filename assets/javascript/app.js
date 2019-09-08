@@ -114,13 +114,13 @@ function checkIfGameOver() {
     if (qstnsArray.length === askedQuestions.length) {
         $(".answerWrapper").hide();
         $(".scoreCard").show();
-        $("#wins").text("Correct Answers" + correct);
-        $("#lost").text("Incorrect Answers" + incorrect);
-        $("#notanswered").text("Unanswers" + notAnswered);
+        $("#wins").text("Correct Answers : " + correct);
+        $("#lost").text("Incorrect Answers : " + incorrect);
+        $("#notanswered").text("Unanswered : " + notAnswered);
         $("#start").show();
         $("#start").text("Sure");
         $("#subTitle").show();
-        $("#subTitle").text("Do you want to play again");
+        $("#subTitle").text("Do you want to play again ?");
     }
     else {
         displayQstn();
