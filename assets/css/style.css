@@ -1,4 +1,41 @@
-.hide{
-    display: none;
+body{
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/Background.png');
 }
+
+#mainHeader{
+    text-align: center;
+    color: rgb(97, 16, 151);
+    font: bolder;
+}
+
+#mainHeading{
+    text-shadow: 3px 2px rgb(185, 145, 230);
+    font-size: 100px;
+    font-style: italic;
+}
+.mainWrapper{
+    min-height: calc(100vh - 70px);
+}
+#buttonDiv{
+    text-align: center;
+}
+#start{
+    border-radius: 12px;
+    background-color:  rgb(185, 145, 230);
+    color: rgb(97, 16, 151);
+    margin-top: 10%;
+}
+
+#start:hover{
+    color:  rgb(185, 145, 230);
+    background-color: rgb(97, 16, 151);
+}
+
+
+
+
+
 

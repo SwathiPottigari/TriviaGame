@@ -37,10 +37,14 @@ $("#start").click(function () {
 $(".ans").click(function () {
     if ($(this).text() === randomQstn.ca) {
         revealAnswer("You won", '');
+        $("#wonAudio")[0].play();
         correct++;
     }
     else {
         revealAnswer("You are wrong", randomQstn.ca);
+        // To play the audio element this is how you refer.
+        // SRC:https://bugs.jquery.com/ticket/10374
+        $("#lostAudio")[0].play();
         incorrect++;
     }
     resetTimer();
