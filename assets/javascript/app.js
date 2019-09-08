@@ -37,10 +37,14 @@ $("#start").click(function () {
 $(".ans").click(function () {
     if ($(this).text() === randomQstn.ca) {
         revealAnswer("You won", '');
+        $("#wonAudio")[0].play();
         correct++;
     }
     else {
         revealAnswer("You are wrong", randomQstn.ca);
+        // To play the audio element this is how you refer.
+        // SRC:https://bugs.jquery.com/ticket/10374
+        $("#lostAudio")[0].play();
         incorrect++;
     }
     resetTimer();
@@ -110,13 +114,13 @@ function checkIfGameOver() {
     if (qstnsArray.length === askedQuestions.length) {
         $(".answerWrapper").hide();
         $(".scoreCard").show();
-        $("#wins").text("Correct Answers" + correct);
-        $("#lost").text("Incorrect Answers" + incorrect);
-        $("#notanswered").text("Unanswers" + notAnswered);
+        $("#wins").text("Correct Answers : " + correct);
+        $("#lost").text("Incorrect Answers : " + incorrect);
+        $("#notanswered").text("Unanswered : " + notAnswered);
         $("#start").show();
         $("#start").text("Sure");
         $("#subTitle").show();
-        $("#subTitle").text("Do you want to play again");
+        $("#subTitle").text("Do you want to play again ?");
     }
     else {
         displayQstn();

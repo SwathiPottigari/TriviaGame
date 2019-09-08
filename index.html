@@ -9,85 +9,94 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/Musician.jpg" type="image/jpg">
 </head>
 
 <body>
     <header>
         <div id="mainHeader">
             <h1 id="mainHeading">Trivia Quiz</h1>
-            <h5 id="subTitle">Ready to test your knowledge and learn some new words?</h5>
+            <h5 id="subTitle">Are you ready to test your knowledge and learn some new words?</h5>
         </div>
     </header>
-    <button type="submit" id="start">Let's Start</button>
-    <div class="questionWrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6">
-                    <div class="timer"> Time Remaining :</div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div id="timeRemaining" class="timer"></div>
-                </div>
+
+    <div class="mainWrapper">
+        <div id="buttonDiv">
+            <button type="submit" id="start">Yes,let's Start</button>
+        </div>
+        <div class="questionWrapper">
+            <div id="timer">
+                Time Remaining : <span id="timeRemaining"></span>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="question"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="question"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="answer1" class="ans"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="answer1" class="ans"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="answer2" class="ans"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="answer2" class="ans"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="answer3" class="ans"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="answer3" class="ans"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="answer4" class="ans"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="answer4" class="ans"></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="answerWrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div id="status"></div>
+        <div class="answerWrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div id="status"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div id="answer"></div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div id="answer"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div id="imageDiv">HIhg</div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div id="imageDiv">HIhg</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="scoreCard">
-        <div class="container">
-            <div class="row">
-                <h6>Here is your score :</h6>
-            </div>
-            <div class="row">
-                <div id="wins"></div>
-            </div>
-            <div class="row">
-                <div id="lost"></div>
-            </div>
-            <div class="row">
-                <div id="notanswered"></div>
+        <div class="scoreCard">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                            <h4>Here is your score :</h4>
+                    </div>                    
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                            <div id="wins"></div>
+                    </div>                    
+                </div>
+                <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                                <div id="lost"></div>
+                        </div>                    
+                </div>
+                <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                                <div id="notanswered"></div>
+                        </div>                     
+                </div>
             </div>
         </div>
     </div>
