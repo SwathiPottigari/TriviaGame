@@ -17,8 +17,16 @@ body{
     font-style: italic;
 }
 .mainWrapper{
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);   
 }
+
+.subQuestion{
+    margin-top: 10%;
+    text-align: center;
+    color: rgb(97, 16, 151);
+    font: bolder;
+}
+
 #buttonDiv{
     text-align: center;
 }
@@ -26,7 +34,7 @@ body{
     border-radius: 12px;
     background-color:  rgb(185, 145, 230);
     color: rgb(97, 16, 151);
-    margin-top: 10%;
+    margin-top: 1%;
 }
 
 #start:hover{
@@ -44,10 +52,26 @@ body{
     font: bolder;
 }
 
+#question{
+    font-weight: bolder;
+}
+
+.ans{
+    font-weight:500;
+    font-style: italic;
+    background-color:rgb(90, 164, 200);    
+    margin: 5px;
+}
+
+.ans:hover{
+    background-color:rgb(60, 156, 152);
+    cursor: pointer;
+}
+
 #timer{
     color: rgb(7, 65, 119);
-    font-size: xx-large;
-    font: bolder;
+    font-size: x-large;
+    font-weight: bolder;
     border: 2px dotted  rgb(7, 65, 119);
     width: 50%;
     margin: 0 auto;
@@ -59,6 +83,11 @@ body{
     width: 60%;
     font-size:large;
 }
+img{
+    height: 50%;
+    width: 50%;
+}
+
 footer{
     /* background-color: rgb(185, 145, 230); */
     border-top: 4px solid rgb(97, 16, 151);    
