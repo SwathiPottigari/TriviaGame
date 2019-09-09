@@ -16,13 +16,16 @@
     <header>
         <div id="mainHeader">
             <h1 id="mainHeading">Trivia Quiz</h1>
-            <h5 id="subTitle">Are you ready to test your knowledge and learn some new words?</h5>
+            <!-- <h5 id="subTitle">Are you ready to test your knowledge and learn some new words?</h5> -->
         </div>
     </header>
 
     <div class="mainWrapper">
-        <div id="buttonDiv">
-            <button type="submit" id="start">Yes,let's Start</button>
+        <div class="subQuestion">
+            <h5 id="subTitle">Are you ready to test your knowledge and learn some new words?</h5>
+            <div id="buttonDiv">
+                <button type="submit" id="start">Yes,let's Start</button>
+            </div>
         </div>
         <div class="questionWrapper">
             <div id="timer">
@@ -35,7 +38,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 ">
                         <div id="answer1" class="ans"></div>
                     </div>
                 </div>
@@ -70,7 +73,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
-                        <div id="imageDiv">HIhg</div>
+                        <div id="imageDiv">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -79,23 +83,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
-                            <h4>Here is your score :</h4>
-                    </div>                    
+                        <h4>Here is your score :</h4>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
-                            <div id="wins"></div>
-                    </div>                    
+                        <div id="wins"></div>
+                    </div>
                 </div>
                 <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                                <div id="lost"></div>
-                        </div>                    
+                    <div class="col-md-12 col-sm-12">
+                        <div id="lost"></div>
+                    </div>
                 </div>
                 <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                                <div id="notanswered"></div>
-                        </div>                     
+                    <div class="col-md-12 col-sm-12">
+                        <div id="notanswered"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -108,6 +112,7 @@
     </audio>
     <footer class="footer mt-auto py-3" style="text-align: center">Copyright@</footer>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/questions.js"></script>
     <script src="assets/javascript/app.js"></script>
 </body>
 

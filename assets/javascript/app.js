@@ -1,9 +1,4 @@
-// This array is collection of question objects,each object has question answer and correct answer
-var qstnsArray = [{ q: "what is your name?", a: ["Swathi", "Anurag", "Uma", "Priya"], ca: "Swathi" },
-{ q: "Q2", a: ["1", "2", "3", "4"], ca: "2" },
-{ q: "Q3", a: ["1", "2", "3", "4"], ca: "3" },
-{ q: "Q4", a: ["1", "2", "3", "4"], ca: "4" }
-];
+$.getScript("questions.js");
 
 // Global variables
 var timer = 5;
@@ -36,12 +31,12 @@ $("#start").click(function () {
 // Functionality: It displays if the user has answered correctly or not
 $(".ans").click(function () {
     if ($(this).text() === randomQstn.ca) {
-        revealAnswer("You won", '');
+        revealAnswer("You got it!!", '');
         $("#wonAudio")[0].play();
         correct++;
     }
     else {
-        revealAnswer("You are wrong", randomQstn.ca);
+        revealAnswer("Nope!!", randomQstn.ca);
         // To play the audio element this is how you refer.
         // SRC:https://bugs.jquery.com/ticket/10374
         $("#lostAudio")[0].play();
@@ -63,7 +58,8 @@ function revealAnswer(status, answer) {
     else {
         $("#answer").addClass("hide");;
     }
-    $(".questionWrapper").hide();
+    $(".questionWrapper").hide();    
+    addImage();
 }
 
 //This function is called when a user clicks on start button
@@ -135,4 +131,13 @@ function reset() {
     correct = 0;
     incorrect = 0;
     notAnswered = 0;
+}
+
+function addImage(){
+    $("#imageDiv img:last-child").remove();
+    var newimageDiv=$("<img>");
+    newimageDiv.attr("src","assets/images/"+randomQstn.image);
+    newimageDiv.attr("id","images");
+    newimageDiv.addClass("img-thumbnail");    
+    $("#imageDiv").append(newimageDiv);
 }
